@@ -1,9 +1,18 @@
-import React from 'react'
+import Job from "../components/home/Job";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <div>
+      {/*  job */}
+      <div> 
+        <Job />
+      </div>
+      {/* Trusted by */}
+      <div >
+dd
+      </div>
+    </div>
+  );
+};
 
-export default Home
+export default Home;
