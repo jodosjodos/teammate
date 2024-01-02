@@ -1,5 +1,5 @@
-import AI from "../../../public/images/ai.svg";
-import Sales from "../../../public/images/sales.svg";
+import AI from "/images/ai.svg";
+import Sales from "/images/sales.svg";
 
 const Services = () => {
   const services = [
@@ -26,7 +26,7 @@ const Services = () => {
     <div className="px-5">
       <div className="flex flex-col items-center pb-5">
         <p className="text-2xl text-blue-600 font-semibold">Services</p>
-        <p>
+        <p className="text-[#393939]">
           The projects we work on can include multiple fields like video editing
           with game development or any other combination
         </p>
@@ -39,11 +39,11 @@ const Services = () => {
           >
             <div className="flex items-center gap-1">
               <img src={service.icon} alt={service.title} />
-              <p className="font-bold">{service.title}</p>
+              <p className="font-bold ">{service.title}</p>
             </div>
 
             <div>
-              <p className="text-sm">{service.subtitle}</p>
+              <p className="text-sm text-[#393939]">{service.subtitle}</p>
             </div>
           </div>
         ))}

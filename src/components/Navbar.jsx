@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   let Links = [
@@ -17,7 +18,7 @@ const Navbar = () => {
       <div className="md:flex items-center justify-between bg-white py-4 md:px-10 px-7">
         {/* logo section */}
         <div className="font-bold text-2xl cursor-pointer flex items-center gap-1">
-          <span>Teamate</span>
+          <Link to="/">Teamate</Link>
         </div>
         {/* Menu icon */}
         <div
@@ -69,9 +70,9 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-            <button className="bg-blue-600 w-80 md:w-auto text-white md:ml-8 font-semibold px-3 py-1 rounded duration-500 md:static">
+            <Link to="/booking" className="bg-blue-600 w-80 md:w-auto text-white md:ml-8 sm:ml-0 font-semibold px-3 py-1 rounded duration-500 md:static">
               Book now
-            </button>
+            </Link>
           </ul>
         </div>
       </div>
