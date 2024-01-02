@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Job() {
   const boxShadowStyle = {
     boxShadow:
@@ -33,9 +35,9 @@ function Job() {
           </p>
         </div>
           <div className="flex lg:flex-row md:flex-row sm:flex-col gap-3">
-            <button className="bg-[#F1511B] px-10 rounded-lg py-3 text-white font-bold hover:text-[#F1511B] hover:bg-white hover:border-[#F1511B] border-2">
+            <Link to='/form' className="bg-[#F1511B] px-10 rounded-lg py-3 text-white font-bold hover:text-[#F1511B] hover:bg-white hover:border-[#F1511B] border-2">
               Fill Form
-            </button>
+            </Link>
             <button className="text-[#F1511B] border-[#F1511B] border-2 px-10 rounded-lg py-3 font-bold hover:bg-[#F1511B] hover:text-white">
               Book call
             </button>

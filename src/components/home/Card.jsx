@@ -1,4 +1,4 @@
-const Card = ({ testimony ,key}) => {
+const Card = ({ testimony, key }) => {
   const boxShadowStyle = {
     boxShadow:
       "0px 8.309572219848633px 34.27698516845703px 0px rgba(0, 0, 0, 0.24)",
@@ -6,7 +6,7 @@ const Card = ({ testimony ,key}) => {
 
   return (
     <div
-    key={key}
+      key={key}
       className="relative flex w-full lg:max-w-[26rem] md:max-w-[100%] sm:max-w-[100%]  flex-col  bg-transparent bg-clip-border text-gray-700 shadow-none  rounded-2xl px-12 py-3"
       style={boxShadowStyle}
     >
