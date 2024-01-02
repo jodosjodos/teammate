@@ -8,17 +8,17 @@ const Intro = () => {
   };
   const [isModelOpen, setIsModelOpen] = useState(false);
   const handleModel = () => {
-    setIsModelOpen(prev=>!prev  );
+    setIsModelOpen((prev) => !prev);
   };
   return (
-    <div className={`relative  ${isModelOpen ?" py-36":"py-0"}`}>
+    <div className={`relative  ${isModelOpen ? " py-36" : "py-0"}`}>
       <div
-        className={`flex flex-col md:flex-row md:px-32 md:py-28 md:flex ${
+        className={`flex flex-row justify-between md:flex-row md:py-28 md:flex sm:flex-col ${
           isModelOpen ? "z-10 opacity-15 blur-sm" : "z-50"
         }`}
       >
-        <div className="hidden md:block md:w-1/2 float-left ">
-          <div className="w-2/3 flex flex-col gap-y-6">
+        <div className="hidden md:block lg:block  p-10 flex-1">
+          <div className=" flex flex-col gap-y-6">
             <div>
               <p className="font-semibold text-3xl">
                 <span className="text-[#0064E1]">Hire super Humans</span>
@@ -41,7 +41,9 @@ const Intro = () => {
               </Link>
               <button
                 onClick={handleModel}
-                className={` ${isModelOpen ?"hidden":"block"} px-6 py-2 bg-white border-2 border-[#0064E1] text-[#0064E1] hover:bg-[#0064E1] hover:text-white font-semibold rounded-md`}
+                className={` ${
+                  isModelOpen ? "hidden" : "block"
+                } px-6 py-2 bg-white border-2 border-[#0064E1] text-[#0064E1] hover:bg-[#0064E1] hover:text-white font-semibold rounded-md`}
               >
                 Book call
               </button>
@@ -49,7 +51,7 @@ const Intro = () => {
           </div>
         </div>
 
-        <div className="block md:hidden md:w-1/2 float-left">
+        <div className="block md:hidden lg:hidden">
           <div className="mt-16 flex flex-col gap-y-6 px-5">
             <div>
               <p className="font-semibold text-3xl">
@@ -74,54 +76,28 @@ const Intro = () => {
           </div>
         </div>
 
-        <div className="md:w-1/2 h-72 float-end  mx-auto gap-3 columns-2 px-3 ">
+        <div className="flex-1">
           <img
-            src="images/intro_blob.png"
-            alt="intro-blob"
-            className="w-[330px] md:w-72 h-96 md:h-auto absolute right-0 md:top-[250px] -z-20"
+            src="images/superHumans.png"
+            alt="super human"
+            className="w-full"
           />
-          <div className="z-10 h-96">
-            <div className="flex flex-col gap-y-5">
-              <div className="">
-                <img src="images/intro-1.png" alt="intro-1" className="h-40" />
-              </div>
-              <div>
-                <img src="images/intro-4.png" alt="intro-1" className=" w-52" />
-              </div>
-            </div>
-            <div className="flex flex-col gap-3">
-              <div className="flex gap-5">
-                <div>
-                  <img
-                    src="images/intro-2.png"
-                    alt="intro-1"
-                    className="w-28 h-24"
-                  />
-                </div>
-                <div className=" w-20 rounded-md bg-slate-300"></div>
-              </div>
-              <div>
-                <img
-                  src="images/intro-5.png"
-                  alt="intro-1"
-                  className="w-96 h-40"
-                />
-              </div>
-            </div>
-          </div>
         </div>
       </div>
       {isModelOpen && (
         <div
-          className="absolute z-50 top-0 flex flex-col  items-center justify-center lg:min-w-[1100px] md:max-w-full md:min-w-0 lg:mx-[10%]  md:mx-0 my-5 rounded-xl" 
+          className="absolute z-50 top-0 flex flex-col  items-center justify-center lg:min-w-[1100px] md:max-w-full md:min-w-0 lg:mx-[10%]  md:mx-0 my-5 rounded-xl"
           style={shadowStyle}
         >
           <div className="self-center flex flex-col  py-3 gap-5">
             <button className="self-end px-4" onClick={handleModel}>
-              <CloseIcon  sx={{fontSize:"28px"}}/>
+              <CloseIcon sx={{ fontSize: "28px" }} />
             </button>
             <div className="flex flex-col px-20 gap-3">
-              <h1 className="self-center font-bold text-xl"> <span className="text-[#0064E1]">Terms</span> and condition</h1>
+              <h1 className="self-center font-bold text-xl">
+                {" "}
+                <span className="text-[#0064E1]">Terms</span> and condition
+              </h1>
               <div>
                 <span className="font-bold"> Scope of Work:</span>
                 The Company agrees to provide AI software development and sales
@@ -193,7 +169,13 @@ const Intro = () => {
               </div>
             </div>
             <div className="flex flex-row gap-3 px-20">
-              <input type="checkbox" lang="en" id="checkBox"  className=" w-[5%] hover:cursor-pointer focus:cursor-pointer"  onChange={handleModel}/>
+              <input
+                type="checkbox"
+                lang="en"
+                id="checkBox"
+                className=" w-[5%] hover:cursor-pointer focus:cursor-pointer"
+                onChange={handleModel}
+              />
               <label htmlFor="checkBox">I accept terms and condition</label>
             </div>
           </div>

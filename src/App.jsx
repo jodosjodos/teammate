@@ -10,14 +10,27 @@ import Redirecting from "./pages/Redirecting";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
+  const [progress, setProgress] = useState(10);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000); // Set the duration for your loading simulation
+    const timer = setInterval(() => {
+      setProgress((prevProgress) =>
+        prevProgress >= 100 ? 0 : prevProgress + 10
+      );
+    }, 100);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearInterval(timer);
+    };
   }, []);
+
+  useEffect(() => {
+    if (progress === 100) {
+      setTimeout(() => {
+        setLoading(false);
+      }, 100);
+    }
+  }, [progress]);
 
   return (
     <BrowserRouter>
@@ -25,7 +38,7 @@ const App = () => {
         <Navbar />
         <main>
           {loading ? (
-            <LinearLoading />
+            <LinearLoading progress={progress} setProgress={setProgress} />
           ) : (
             <Routes>
               <Route path="/" element={<Home />} />
