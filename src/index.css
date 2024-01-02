@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 * {
+<<<<<<< HEAD
     font-family: 'Inter', sans-serif;
 }
 
@@ -21,3 +22,7 @@
   background-color: #666e75;
   border-radius: 5px;
 }
+=======
+  font-family: 'Inter', sans-serif;
+}
+>>>>>>> main
