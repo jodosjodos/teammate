@@ -25,7 +25,7 @@ const Navbar = () => {
         </div>
         {/* link items */}
         <div
-          className={`md:hidden rounded-md absolute top-20 left-[10px] w-[95%] bg-white transition-transform duration-300 transform ${open ? 'translate-x-0' : '-translate-x-full'
+          className={`md:hidden rounded-md absolute top-20 left-0 w-[95%] bg-white transition-transform duration-300 transform ${open ? 'translate-x-0' : '-translate-x-full'
             }`}
         >
           <ul className='flex flex-col items-center py-7'>
@@ -40,7 +40,7 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-            <button className='bg-orange-600 w-80 text-white font-semibold px-3 py-1 rounded duration-500'>
+            <button className='bg-blue-600 w-80 text-white font-semibold px-3 py-1 rounded duration-500'>
               Book now
             </button>
           </ul>
@@ -55,7 +55,7 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-            <button className='bg-orange-600 w-80 md:w-auto text-white md:ml-8 font-semibold px-3 py-1 rounded duration-500 md:static'>
+            <button className='bg-blue-600 w-80 md:w-auto text-white md:ml-8 font-semibold px-3 py-1 rounded duration-500 md:static'>
               Book now
             </button>
           </ul>
