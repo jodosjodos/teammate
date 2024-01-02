@@ -1,4 +1,6 @@
 import { useCountries } from "use-react-countries";
+import { useNavigate } from "react-router-dom";
+
 import {
   Input,
   Menu,
@@ -8,8 +10,11 @@ import {
   Button,
 } from "@material-tailwind/react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function FormPage() {
+ 
+
   const { countries } = useCountries();
   const [country, setCountry] = useState(0);
   const { name, flags, countryCallingCode } = countries[country];
@@ -181,9 +186,12 @@ function FormPage() {
             </div>
           </div>
         </div>
-        <button className="bg-[#F1511B] px-12 rounded-lg py-3 text-white font-bold hover:text-[#F1511B] hover:bg-white hover:border-[#F1511B] border-2 lg:self-center md:self-center ">
+        <Link
+          className="bg-[#F1511B] px-12 rounded-lg py-3 text-white font-bold hover:text-[#F1511B] hover:bg-white hover:border-[#F1511B] border-2 lg:self-center md:self-center "
+        to="/redirect"
+        >
           Send
-        </button>
+        </Link>
       </form>
     </div>
   );

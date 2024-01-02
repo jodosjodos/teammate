@@ -38,9 +38,9 @@ function Job() {
             <Link to='/form' className="bg-[#F1511B] px-10 rounded-lg py-3 text-white font-bold hover:text-[#F1511B] hover:bg-white hover:border-[#F1511B] border-2">
               Fill Form
             </Link>
-            <button className="text-[#F1511B] border-[#F1511B] border-2 px-10 rounded-lg py-3 font-bold hover:bg-[#F1511B] hover:text-white">
+            <Link to="/booking" className="text-[#F1511B] border-[#F1511B] border-2 px-10 rounded-lg py-3 font-bold hover:bg-[#F1511B] hover:text-white">
               Book call
-            </button>
+            </Link>
           </div>
         <div className="self-end absolute bottom-6">
           <img src="images/imageJob.png" alt="" />
