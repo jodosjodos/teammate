@@ -13,7 +13,7 @@ function Reality() {
       >
         <div>
           <h1 className="text-xl font-bold">
-            <span className="text-[#F1511B]">Transform</span> your vision into
+            <span className="text-[#0064E1]">Transform</span> your vision into
             reality
           </h1>
         </div>
@@ -28,7 +28,7 @@ function Reality() {
             to bring top- tier services to you.
           </p>
         </div>
-        <Link className="bg-[#F1511B]  rounded-lg py-3  border-2 border-[#F1511B] text-white font-bold hover:text-[#F1511B] hover:bg-white hover:border-[#F1511B] hover:border-2 lg:w-[8%] md:w-[15%] sm:w-[70%] flex items-center justify-center">
+        <Link to='/booking' className="bg-[#0064E1]  rounded-lg py-3  border-2 border-[#0064E1 text-white font-bold hover:text-[#0064E1] hover:bg-white hover:border-[#0064E1] hover:border-2 lg:w-[8%] md:w-[15%] sm:w-[70%] flex items-center justify-center">
           Book Now
         </Link>
       </div>

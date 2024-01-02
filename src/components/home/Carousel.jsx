@@ -34,7 +34,7 @@ const Carousel = () => {
             key={index}
             onClick={() => handleDotClick(index)}
             className={`w-4 h-4 rounded-full focus:outline-none ${
-              index === selectedItem ? "bg-[#F1511B]" : "bg-gray-400"
+              index === selectedItem ? "bg-[#0064E1]" : "bg-gray-400"
             }`}
           />
         ))}

@@ -1,22 +1,32 @@
 import React from "react";
+import { useMediaQuery } from "react-responsive";
 
 const About = () => {
+  const isSmallScreen = useMediaQuery({ maxWidth: 767 });
+  console.log(isSmallScreen);
   return (
-    <div className="w-[90%] md:w-full flex flex-col mt-20 md:mt-0 p-5 md:px-10">
+    <div className=" md:w-full flex flex-col mt-20 md:mt-0 p-5 md:px-10">
       <div className="flex flex-col items-center pb-5">
         <p className="text-2xl text-blue-600 font-semibold">About</p>
-        <p className="text-sm">
+        <p className="text-sm text-[#707070]">
           What make us special to be choosen by our clients
         </p>
+        <div className="sm:hidden md:block lg:block">
+          <img src="images/aboutEclipse.png" alt=" eclipse" />
+        </div>
       </div>
-      <div className="py-5">
-        <div className="float-left w-96">
-          <img src="images/about-1.png" alt="about-1" />
+      <div className="py-5 flex lg:flex-row md:flex-row sm:flex-col  items-center lg:gap-12 md:gap-0">
+        <div className=" flex-1">
+          <img
+            src="images/about-1.png"
+            alt="about-1"
+            className="lg:w-[80%] md:w-full sm:w-full"
+          />
         </div>
 
-        <div className="float-right md:w-[700px] flex flex-col md:flex-none">
-          <div className="w-full pt-8 ml-5 md:pt-0">
-            <p className="text-sm">
+        <div className=" relative md:w-[50%] flex flex-col md:flex-none flex-1">
+          <div className=" pt-8 ml-5 md:pt-0">
+            <p className="text-sm text-[#393939] leading-96">
               We Assign Teams To Companies For All Remote Jobs And Projects,
               Covering Everything From Software Engineering To Sales. Each Team
               Comes With A Team Manager Who Is Responsible For All
@@ -56,6 +66,9 @@ const About = () => {
               <p className="font-bold text-xl text-blue-600">1000+</p>
               <p>Completed project</p>
             </div>
+          </div>
+          <div className=" absolute self-end right-[10%] lg:top-[25%] md:top-[30%] sm:bottom-[15%] md:w-[20%] sm:w-[20%]">
+            <img src="images/aboutEclipse2.png" alt="" className="w-full"  />
           </div>
         </div>
       </div>

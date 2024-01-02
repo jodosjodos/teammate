@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Intro = () => {
   return (
@@ -7,7 +8,7 @@ const Intro = () => {
         <div className="w-2/3 flex flex-col gap-y-6">
           <div>
             <p className="font-semibold text-3xl">
-              <span className="text-orange-600">Hire super Humans</span>
+              <span className="text-[#0064E1]">Hire super Humans</span>
               <br />
               <span>Hire teams instead of employees</span>
             </p>
@@ -19,12 +20,12 @@ const Intro = () => {
             </p>
           </div>
           <div className="flex gap-x-8">
-            <button className="px-6 py-2 text-white bg-orange-600 font-semibold rounded-md">
+            <Link to="/form" className="px-6 py-2 text-white bg-[#0064E1] hover:border-2 hover:bg-white hover:border-[#0064E1] hover:text-[#0064E1] font-semibold rounded-md">
               Fill form
-            </button>
-            <button className="px-6 py-2 bg-white border-2 border-orange-500 font-semibold rounded-md">
+            </Link>
+            <Link to="/booking" className="px-6 py-2 bg-white border-2 border-[#0064E1] text-[#0064E1] hover:bg-[#0064E1] hover:text-white font-semibold rounded-md">
               Book call
-            </button>
+            </Link>
           </div>
         </div>
       </div>

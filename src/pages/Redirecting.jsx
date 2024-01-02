@@ -19,7 +19,7 @@ function Redirecting() {
         <img src="images/largeLogo.png" alt=" large logo" className="sm:w-56 md:w-full lg:w-full" />
       </div>
       <p className="lg:text-2xl md:text-xl">We have successfully received your request</p>
-      <p className="text-[#F1511B]">Redirecting...</p>
+      <p className="text-[#0064E1]">Redirecting...</p>
     </div>
   );
 }

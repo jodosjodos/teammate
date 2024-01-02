@@ -187,7 +187,7 @@ function FormPage() {
           </div>
         </div>
         <Link
-          className="bg-[#F1511B] px-12 rounded-lg py-3 text-white font-bold hover:text-[#F1511B] hover:bg-white hover:border-[#F1511B] border-2 lg:self-center md:self-center "
+          className="bg-[#0064E1] px-12 rounded-lg py-3 text-white font-bold hover:text-[#0064E1] hover:bg-white hover:border-[#0064E1] border-2 lg:self-center md:self-center "
         to="/redirect"
         >
           Send

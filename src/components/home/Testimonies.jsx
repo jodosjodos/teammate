@@ -30,7 +30,7 @@ function Testimonies() {
   return (
     <div className="flex flex-col gap-5">
       <div className="self-center flex flex-col justify-center items-center">
-        <h1 className="text-[#F1511B] font-bold text-xl ">Testimonials</h1>
+        <h1 className="text-[#0064E1] font-bold text-xl ">Testimonials</h1>
         <p>What our client says</p>
       </div>
       <div className="flex lg:flex-row md:flex-col sm:flex-col  lg:px-0 md:px-2 sm:px-2   gap-16 lg:items-center md:items-start sm:items-start  justify-around">
