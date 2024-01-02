@@ -5,9 +5,9 @@ module.exports = withMT({
     screens: {
       sm: "300px",
     },
-    boxShadow:{
-       sm:"0px -1px 5.3px 0px #00000024"
-    }
+    boxShadow: {
+      sm: "0px -1px 5.3px 0px #00000024",
+    },
   },
   plugins: [],
 });
