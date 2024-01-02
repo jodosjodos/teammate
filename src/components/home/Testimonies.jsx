@@ -33,9 +33,9 @@ function Testimonies() {
         <h1 className="text-[#F1511B] font-bold text-xl ">Testimonials</h1>
         <p>What our client says</p>
       </div>
-      <div className="flex flex-row gap-16 items-center justify-around">
+      <div className="flex lg:flex-row md:flex-col sm:flex-col  lg:px-0 md:px-2 sm:px-2   gap-16 lg:items-center md:items-start sm:items-start  justify-around">
         {testimonies.map((testimony) => (
-          <Card testimony={testimony} />
+          <Card testimony={testimony}  key={testimony.id}/>
         ))}
       </div>
     </div>

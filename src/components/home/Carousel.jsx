@@ -15,15 +15,15 @@ const Carousel = () => {
 
   return (
     <div className="relative">
-      <div className="flex items-center justify-around space-x-4">
+      <div className="flex lg:items-center md:items-start sm:items-start  lg:justify-around md:justify-start sm:justify-start lg:space-x-4 md:space-x-0 sm:space-x-0 lg:flex-row  md:flex-row sm:flex-col ">
         {items.map((item, index) => (
           <div
             key={index}
-            className={`transition-transform transform ${
+            className={`transition-transform transform md:w-full sm:w-full ${
               index === selectedItem ? "scale-100" : "scale-75"
             }`}
           >
-            <img src={item} alt="" />
+            <img src={item} alt="" className="md:w-full sm:w-full" />
           </div>
         ))}
       </div>

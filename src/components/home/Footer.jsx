@@ -8,12 +8,12 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 function Footer() {
   return (
     <div className="bg-[#F1511B] flex flex-col gap-5 px-16 py-8">
-      <div className="flex flex-row items-center justify-between">
-        <div>
+      <div className="flex lg:flex-row md:flex-row sm:flex-col   lg:items-center md:items-center lg:justify-between md:justify-center sm:items-start  sm:justify-start ">
+        <div className="flex-1">
           <div>
             <img src="images/logo.png" alt="" />
           </div>
-          <div className="w-72">
+          <div className="md:w-72 lg:w-72 sm:w-60 ">
             <Input
               color="white"
               label="&#x2709; Enter Your Email"
@@ -32,11 +32,11 @@ function Footer() {
                   <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                 </svg>
               }
-              className="bg-[#F27E1E] border-none  "
+              className="bg-[#F27E1E] bg-transparent"
             />
           </div>
         </div>
-        <div className="flex flex-row items-start gap-32">
+        <div className="flex lg:flex-row md:flex-row sm:flex-col items-start gap-32 flex-1">
           <div className="flex flex-col gap-6">
             <h1 className="text-[#909ACF]">Navigation</h1>
             <div className="flex flex-col gap-3 text-white">
@@ -66,7 +66,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex flex-row justify-between items-center">
+      <div className="flex lg:flex-row md:flex-row sm:flex-col   lg:justify-between md:justify-between lg:items-center md:items-center sm:items-center  sm:justify-center">
         <p className="text-white">@2023 Teamate. All Rights Reserved.</p>
         <div className="flex flex-row gap-4">
           <div className="bg-[#F27E1E] flex items-center p-1 rounded-xl justify-center ">

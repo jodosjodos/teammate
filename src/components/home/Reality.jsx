@@ -6,7 +6,7 @@ function Reality() {
       "0px 8.309572219848633px 34.27698516845703px 0px rgba(0, 0, 0, 0.24)",
   };
   return (
-    <div className="px-10">
+    <div className="lg:px-10 md:px-2 sm:px-2">:
       <div
         style={boxShadowStyle}
         className=" rounded-xl flex flex-col gap-5 p-12"
@@ -28,7 +28,7 @@ function Reality() {
             to bring top- tier services to you.
           </p>
         </div>
-        <Link className="bg-[#F1511B]  rounded-lg py-3 border-2 border-[#F1511B] text-white font-bold hover:text-[#F1511B] hover:bg-white hover:border-[#F1511B] hover:border-2 w-[8%] flex items-center justify-center">
+        <Link className="bg-[#F1511B]  rounded-lg py-3  border-2 border-[#F1511B] text-white font-bold hover:text-[#F1511B] hover:bg-white hover:border-[#F1511B] hover:border-2 lg:w-[8%] md:w-[15%] sm:w-[70%] flex items-center justify-center">
           Book Now
         </Link>
       </div>

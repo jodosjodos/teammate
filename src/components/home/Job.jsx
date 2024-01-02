@@ -32,8 +32,7 @@ function Job() {
             Our team will review your submission promptly.
           </p>
         </div>
-        <div className="flex flex-row justify-between">
-          <div className="flex flex-row gap-3">
+          <div className="flex lg:flex-row md:flex-row sm:flex-col gap-3">
             <button className="bg-[#F1511B] px-10 rounded-lg py-3 text-white font-bold hover:text-[#F1511B] hover:bg-white hover:border-[#F1511B] border-2">
               Fill Form
             </button>
@@ -41,7 +40,6 @@ function Job() {
               Book call
             </button>
           </div>
-        </div>
         <div className="self-end absolute bottom-6">
           <img src="images/imageJob.png" alt="" />
         </div>
