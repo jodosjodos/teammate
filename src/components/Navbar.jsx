@@ -70,7 +70,10 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-            <Link to="/booking" className="bg-blue-600 w-80 md:w-auto text-white md:ml-8 sm:ml-0 font-semibold px-3 py-1 rounded duration-500 md:static">
+            <Link
+              to="/booking"
+              className="bg-blue-600 w-80 md:w-auto text-white md:ml-8 sm:ml-0 font-semibold px-3 py-1 rounded duration-500 md:static"
+            >
               Book now
             </Link>
           </ul>

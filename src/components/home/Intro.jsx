@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
 
 const Intro = () => {
+  const navigate = useNavigate()
   const shadowStyle = {
     boxShadow: "0px 8.309572219848633px 34.27698516845703px 0px #00000024",
   };
@@ -10,6 +11,9 @@ const Intro = () => {
   const handleModel = () => {
     setIsModelOpen((prev) => !prev);
   };
+  const directUser=()=>{
+    navigate("/booking")
+  }
   return (
     <div className={`relative  ${isModelOpen ? " py-36" : "py-0"}`}>
       <div
@@ -174,7 +178,7 @@ const Intro = () => {
                 lang="en"
                 id="checkBox"
                 className=" w-[5%] hover:cursor-pointer focus:cursor-pointer"
-                onChange={handleModel}
+                onChange={directUser}
               />
               <label htmlFor="checkBox">I accept terms and condition</label>
             </div>

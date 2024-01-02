@@ -2,8 +2,6 @@ import React from "react";
 import { useMediaQuery } from "react-responsive";
 
 const About = () => {
-  const isSmallScreen = useMediaQuery({ maxWidth: 767 });
-  console.log(isSmallScreen);
   return (
     <div className=" md:w-full flex flex-col mt-20 md:mt-0 p-5 md:px-10">
       <div className="flex flex-col items-center pb-5">
