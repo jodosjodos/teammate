@@ -1,24 +1,24 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  let Links = [
-    { name: "Home", link: "/" },
-    { name: "About", link: "/" },
-    { name: "Service", link: "/" },
-    { name: "Testimonies", link: "/" },
-    { name: "FAQ", link: "/" },
+  const Links = [
+    { name: "Home", link: "#intro" },
+    { name: "About", link: "#about" },
+    { name: "Choose", link: "#choose" },
+    { name: "Services", link: "#services" },
+    { name: "Job", link: "#job" },
   ];
-  let [open, setOpen] = useState(false);
+
+  const [open, setOpen] = useState(false);
 
   return (
     <div className="shadow-md w-full relative top-0 left-0">
       <div className="md:flex items-center justify-between bg-white py-4 md:px-10 px-7">
         {/* logo section */}
         <div className="font-bold text-2xl cursor-pointer flex items-center gap-1">
-          <Link to="/">Teamate</Link>
+          <a href="/">Teamate</a>
         </div>
         {/* Menu icon */}
         <div
@@ -33,8 +33,8 @@ const Navbar = () => {
         </div>
         {/* link items */}
         <div
-          className={`md:hidden rounded-md absolute top-20 left-0 w-[95%] bg-white transition-transform duration-300 transform ${
-            open ? "translate-x-0" : "-translate-x-full"
+          className={`md:hidden rounded-md absolute top-20 -left-5 w-[95%] bg-white z-10 transition-transform duration-300 transform ${
+            open ? "translate-x-0 ml-8" : "-translate-x-full"
           }`}
         >
           <ul className="flex flex-col items-center py-7">
@@ -49,9 +49,12 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-            <button className="bg-blue-600 w-80 text-white font-semibold px-3 py-1 rounded duration-500">
+            <a
+              href="/booking"
+              className="bg-blue-600 w-80 flex justify-center text-white font-semibold px-3 py-1 rounded duration-500"
+            >
               Book now
-            </button>
+            </a>
           </ul>
         </div>
         {/* Desktop navigation */}
@@ -70,12 +73,12 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-            <Link
-              to="/booking"
+            <a
+              href="/booking"
               className="bg-blue-600 w-80 md:w-auto text-white md:ml-8 sm:ml-0 font-semibold px-3 py-1 rounded duration-500 md:static"
             >
               Book now
-            </Link>
+            </a>
           </ul>
         </div>
       </div>

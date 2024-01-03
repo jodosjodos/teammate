@@ -35,20 +35,21 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="flex flex-col">
-        <Navbar />
-        <main>
-          {loading ? (
-            <LinearLoading progress={progress} setProgress={setProgress} />
-          ) : (
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/form" element={<FormPage />} />
-              <Route path="/booking" element={<Booking />} />
-              <Route path="/redirect" element={<Redirecting />} />
-            </Routes>
-          )}
-        </main>
+        {loading ? (
+          <LinearLoading progress={progress} setProgress={setProgress} />
+        ) : (
+          <>
+            <Navbar /><main>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/form" element={<FormPage />} />
+                <Route path="/booking" element={<Booking />} />
+                <Route path="/redirect" element={<Redirecting />} />
+              </Routes>
+            </main>
+          </>
+        )}
       </div>
     </BrowserRouter>
   );

@@ -1,3 +1,4 @@
+import Scrollspy from 'react-scrollspy';
 import Footer from "../components/home/Footer";
 import Job from "../components/home/Job";
 import Reality from "../components/home/Reality";
@@ -9,45 +10,41 @@ import About from "../components/home/About";
 import Choose from "../components/home/Choose";
 
 const Home = () => {
+  
   return (
-    <div className="flex flex-col gap-5">
-      {/* Intro */}
-      <div>
-        <Intro />
-      </div>
-      {/* About */}
-      <div>
-        <About />
-      </div>
-      {/* Choose */}
-      <div>
-        <Choose />
-      </div>
-      {/* Services */}
-      <div>
-        <Services />
-      </div>
+    <div className="flex flex-col gap-5 transition duration-500">
+      <Scrollspy
+        items={['intro', 'about', 'choose', 'services', 'job']}
+        currentClassName="your-active-class"
+        offset={-50} 
+      >
+        {/* Intro */}
+        <div id="intro">
+          <Intro />
+        </div>
+        {/* About */}
+        <div id="about">
+          <About />
+        </div>
+        {/* Choose */}
+        <div id="choose">
+          <Choose />
+        </div>
+        {/* Services */}
+        <div id="services">
+          <Services />
+        </div>
+        {/* Job */}
+        <div id="job">
+          <Job />
+        </div>
+      </Scrollspy>
 
-      {/*  job */}
-      <div>
-        <Job />
-      </div>
-      {/* Trusted by */}
-      <div>
-        <Trusted />
-      </div>
-      {/* testimonies */}
-      <div>
-        <Testimonies />
-      </div>
-      {/* reality */}
-      <div>
-        <Reality />
-      </div>
-      {/* footer */}
-      <div>
-        <Footer />
-      </div>
+      {/* Other sections */}
+      <Trusted />
+      <Testimonies />
+      <Reality />
+      <Footer />
     </div>
   );
 };

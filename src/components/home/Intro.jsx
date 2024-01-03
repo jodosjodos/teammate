@@ -80,7 +80,7 @@ const Intro = () => {
           </div>
         </div>
 
-        <div className="flex-1">
+        <div className="flex-1 ml-5">
           <img
             src="images/superHumans.png"
             alt="super human"
