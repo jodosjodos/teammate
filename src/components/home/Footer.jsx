@@ -7,7 +7,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 function Footer() {
   return (
-    <div className="bg-[#F1511B] flex flex-col gap-5 px-16 py-8">
+    <div className="bg-[#0064E1] flex flex-col gap-5 px-16 py-8">
       <div className="flex lg:flex-row md:flex-row sm:flex-col   lg:items-center md:items-center lg:justify-between md:justify-center sm:items-start  sm:justify-start ">
         <div className="flex-1">
           <div>
@@ -32,7 +32,7 @@ function Footer() {
                   <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                 </svg>
               }
-              className="bg-[#F27E1E] bg-transparent"
+              className="bg-[#0081FB] bg-transparent"
             />
           </div>
         </div>
@@ -69,16 +69,16 @@ function Footer() {
       <div className="flex lg:flex-row md:flex-row sm:flex-col   lg:justify-between md:justify-between lg:items-center md:items-center sm:items-center  sm:justify-center">
         <p className="text-white">@2023 Teamate. All Rights Reserved.</p>
         <div className="flex flex-row gap-4">
-          <div className="bg-[#F27E1E] flex items-center p-1 rounded-xl justify-center ">
+          <div className="bg-[#0081FB] flex items-center p-1 rounded-xl justify-center ">
             <FacebookIcon sx={{ color: "white" }} />
           </div>
-          <div className="bg-[#F27E1E] flex items-center p-1 rounded-xl justify-center">
+          <div className="bg-[#0081FB] flex items-center p-1 rounded-xl justify-center">
             <LinkedInIcon sx={{ color: "white" }} />
           </div>
-          <div className="bg-[#F27E1E] flex items-center p-1 rounded-xl justify-center">
+          <div className="bg-[#0081FB] flex items-center p-1 rounded-xl justify-center">
             <TwitterIcon sx={{ color: "white" }} />
           </div>
-          <div className="bg-[#F27E1E] flex items-center p-1 rounded-xl justify-center">
+          <div className="bg-[#0081FB] flex items-center p-1 rounded-xl justify-center">
             <YouTubeIcon sx={{ color: "white" }} />
           </div>
         </div>
