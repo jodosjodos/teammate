@@ -27,9 +27,9 @@ function FormPage() {
     boxShadow: "0px -1px 5.3px 0px #00000024",
   };
   return (
-    <div className="px-16 py-5">
+    <div className="lg:px-16 md:px-12 sm:px-5 py-5">
       <form
-        className="flex flex-col gap-5 rounded-xl px-12 py-5"
+        className="flex flex-col gap-5 rounded-xl lg:px-12 md:px-10 sm:px-5 py-5"
         style={boxShadowStyle}
       >
         <h1 className="self-center text-xl font-bold">
@@ -187,7 +187,7 @@ function FormPage() {
           </div>
         </div>
         <Link
-          className="bg-[#0064E1] px-12 rounded-lg py-3 text-white font-bold hover:text-[#0064E1] hover:bg-white hover:border-[#0064E1] border-2 lg:self-center md:self-center "
+          className="bg-[#0064E1] px-12 rounded-lg py-3 text-white font-bold hover:text-[#0064E1] hover:bg-white hover:border-[#0064E1] border-2 lg:self-center md:self-center  text-center"
         to="/redirect"
         >
           Send

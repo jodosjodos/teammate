@@ -4,7 +4,7 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const Links = [
-    { name: "Home", link: "#intro" },
+    { name: "Home", link: "/" },
     { name: "About", link: "#about" },
     { name: "Choose", link: "#choose" },
     { name: "Services", link: "#services" },
@@ -14,7 +14,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="shadow-md w-full relative top-0 left-0">
+    <div className="shadow-md w-full  z-50 top-0 left-0 sticky">
       <div className="md:flex items-center justify-between bg-white py-4 md:px-10 px-7">
         {/* logo section */}
         <div className="font-bold text-2xl cursor-pointer flex items-center gap-1">

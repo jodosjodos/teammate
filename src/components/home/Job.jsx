@@ -35,10 +35,10 @@ function Job() {
           </p>
         </div>
           <div className="flex lg:flex-row md:flex-row sm:flex-col gap-3">
-            <Link to='/form' className="bg-[#0064E1] px-10 rounded-lg py-3 text-white font-bold hover:text-[#0064E1] hover:bg-white hover:border-[#0064E1] border-2">
+            <Link to='/form' className="bg-[#0064E1] px-10 rounded-lg py-3 text-white font-bold hover:text-[#0064E1] hover:bg-white hover:border-[#0064E1] border-2 flex items-center justify-center">
               Fill Form
             </Link>
-            <Link to="/booking" className="text-[#0064E1] border-[#0064E1] border-2 px-10 rounded-lg py-3 font-bold hover:bg-[#0064E1] hover:text-white">
+            <Link to="/booking" className="text-[#0064E1] border-[#0064E1] border-2 px-10 rounded-lg py-3 font-bold hover:bg-[#0064E1] hover:text-white flex items-center justify-center">
               Book call
             </Link>
           </div>
