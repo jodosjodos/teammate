@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const Links = [
@@ -49,12 +50,12 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-            <a
-              href="/booking"
+            <Link
+              to="/booking"
               className="bg-blue-600 w-80 flex justify-center text-white font-semibold px-3 py-1 rounded duration-500"
             >
               Book now
-            </a>
+            </Link>
           </ul>
         </div>
         {/* Desktop navigation */}
@@ -73,12 +74,12 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-            <a
-              href="/booking"
+            <Link
+              to="/booking"
               className="bg-blue-600 w-80 md:w-auto text-white md:ml-8 sm:ml-0 font-semibold px-3 py-1 rounded duration-500 md:static"
             >
               Book now
-            </a>
+            </Link>
           </ul>
         </div>
       </div>
