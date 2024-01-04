@@ -184,7 +184,7 @@ const Intro = ({isModelOpen,setIsModelOpen}) => {
               </div>
             </div>
             <div className="flex lg:flex-row md:flex-row sm:flex-col gap-8 lg:px-20 md:px-12 sm:px-5 items-center">
-              <div className="flex flex-1 flex-row items-center gap-2">
+              <div className="flex  flex-row items-center gap-2">
                 <input
                   type="checkbox"
                   lang="en"
@@ -197,7 +197,7 @@ const Intro = ({isModelOpen,setIsModelOpen}) => {
               </div>
               <button
                 disabled={!isChecked}
-                className="px-8  py-2 text-white bg-blue-600 font-semibold rounded-md text-sm disabled:opacity-50 sm:w-full md:w-fit lg:w-fit flex-1"
+                className="px-8  py-2 text-white bg-blue-600 font-semibold rounded-md text-sm disabled:opacity-50 sm:w-full md:w-fit"
                 onClick={directUser}
               >
                 Proceed
