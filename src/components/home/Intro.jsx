@@ -2,18 +2,24 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
 
-const Intro = () => {
-  const navigate = useNavigate()
+const Intro = ({isModelOpen,setIsModelOpen}) => {
+  const navigate = useNavigate();
   const shadowStyle = {
     boxShadow: "0px 8.309572219848633px 34.27698516845703px 0px #00000024",
   };
-  const [isModelOpen, setIsModelOpen] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
+
   const handleModel = () => {
     setIsModelOpen((prev) => !prev);
   };
-  const directUser=()=>{
-    navigate("/booking")
-  }
+
+  const handleCheckboxChange = () => {
+    setIsChecked(!isChecked);
+  };
+
+  const directUser = () => {
+    navigate("/booking");
+  };
   return (
     <div className={`relative  ${isModelOpen ? " py-36" : "py-0"}`}>
       <div
@@ -73,7 +79,12 @@ const Intro = () => {
               </p>
             </div>
             <div className="flex gap-x-8 my-10">
-              <button className="px-6 py-2 text-white bg-blue-600 font-semibold rounded-md text-sm">
+              <button
+                onClick={handleModel}
+                className={` ${
+                  isModelOpen ? "hidden" : "block"
+                } px-6 py-2 text-white bg-blue-600 font-semibold rounded-md text-sm`}
+              >
                 Hire our team
               </button>
             </div>
@@ -90,14 +101,14 @@ const Intro = () => {
       </div>
       {isModelOpen && (
         <div
-          className="absolute z-50 top-0 flex flex-col  items-center justify-center lg:min-w-[1100px] md:max-w-full md:min-w-0 lg:mx-[10%]  md:mx-0 my-5 rounded-xl"
+          className="absolute z-40 top-0 flex flex-col  items-center justify-center lg:min-w-[1100px] md:max-w-full sm:max-w-full md:min-w-0 sm:mx-2 lg:mx-[10%]   md:mx-0 my-5 rounded-xl h-fit"
           style={shadowStyle}
         >
           <div className="self-center flex flex-col  py-3 gap-5">
             <button className="self-end px-4" onClick={handleModel}>
               <CloseIcon sx={{ fontSize: "28px" }} />
             </button>
-            <div className="flex flex-col px-20 gap-3">
+            <div className="flex flex-col lg:px-20 md:px-16 sm:px-2 gap-3">
               <h1 className="self-center font-bold text-xl">
                 {" "}
                 <span className="text-[#0064E1]">Terms</span> and condition
@@ -172,15 +183,25 @@ const Intro = () => {
                 agreements or understandings.
               </div>
             </div>
-            <div className="flex flex-row gap-3 px-20">
-              <input
-                type="checkbox"
-                lang="en"
-                id="checkBox"
-                className=" w-[5%] hover:cursor-pointer focus:cursor-pointer"
-                onChange={directUser}
-              />
-              <label htmlFor="checkBox">I accept terms and condition</label>
+            <div className="flex lg:flex-row md:flex-row sm:flex-col gap-8 lg:px-20 md:px-12 sm:px-5 items-center">
+              <div className="flex flex-1 flex-row items-center gap-2">
+                <input
+                  type="checkbox"
+                  lang="en"
+                  id="checkBox"
+                  className="  hover:cursor-pointer focus:cursor-pointer w-5 h-5"
+                  checked={isChecked}
+                  onChange={handleCheckboxChange}
+                />
+                <label htmlFor="checkBox">I accept terms and condition</label>
+              </div>
+              <button
+                disabled={!isChecked}
+                className="px-8  py-2 text-white bg-blue-600 font-semibold rounded-md text-sm disabled:opacity-50 sm:w-full md:w-fit lg:w-fit flex-1"
+                onClick={directUser}
+              >
+                Proceed
+              </button>
             </div>
           </div>
         </div>
