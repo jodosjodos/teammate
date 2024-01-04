@@ -183,7 +183,7 @@ const Intro = ({isModelOpen,setIsModelOpen}) => {
                 agreements or understandings.
               </div>
             </div>
-            <div className="flex lg:flex-row md:flex-row sm:flex-col gap-8 lg:px-20 md:px-12 sm:px-5 items-center">
+            <div className="flex lg:flex-row md:flex-row sm:flex-col gap-8 lg:px-20 md:px-12 sm:px-5 items-center justify-between">
               <div className="flex  flex-row items-center gap-2">
                 <input
                   type="checkbox"
